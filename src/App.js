@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./Profile/components/Profile";
+
+const handleName = (e) => alert(e);
+const info = {
+  fullName: "Emna Rbii",
+  bio: "I'm full stack js",
+  profession: "fullstack developper",
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile info={info} handleName={handleName}>
+        <img
+          src="https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg"
+          alt="react"
+        />
+      </Profile>
     </div>
   );
 }
